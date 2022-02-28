@@ -11,8 +11,9 @@ namespace OopTextTransformations.Terminal
             string text = "Hello world!";
 
             ProcessingEngine engine = new ProcessingEngine(
-                new StringReplaceRule("world", "C#"),
-                new StringRemoveRule("Hello "));
+                new StringInsertRule(0, "Test "),
+                new StringRemoveRule("Hello "),
+                new StringReplaceRule("world", "C#"));
 
             string transformed = engine.Transform(text);
 
